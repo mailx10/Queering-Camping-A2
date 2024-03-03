@@ -1,60 +1,391 @@
+/*-------------------------------CLEANED UP CODE BELOW-------------------------------*/
+
 * {
     padding: 0;
     margin: 0;
 }
-/* FONT FAMILIES STYLE GUIDES*/
 
-.londrina-outline-regular {
-  font-family: "Londrina Outline", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-// <uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 100 to 900
-
-.libre-franklin-<uniquifier> {
-  font-family: "Libre Franklin", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-}
-
-.londrina-solid-thin {
-  font-family: "Londrina Solid", sans-serif;
-  font-weight: 100;
-  font-style: normal;
-}
-
-.londrina-solid-light {
-  font-family: "Londrina Solid", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-}
-
-.londrina-solid-regular {
-  font-family: "Londrina Solid", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.londrina-solid-black {
-  font-family: "Londrina Solid", sans-serif;
-  font-weight: 900;
-  font-style: normal;
-}
-
-/* FONT FAMILIES ABOVE */
-
-.home{
+body{
   background: #FFF9C7;
 }
 
-aside.asterix{
-  font-family: "Libre Franklin";
-  font-size: 12px;
-  color: #415B34;
+/*-----DISABLE HORIZONTAL SCROLL, HIDE VERTICAL SCROLLBAR-----*/
+  /*-Code snippet by Anirban Bhui @stackoverflow-*/
+
+  html {
+      overflow: scroll;
+      overflow-x: hidden;
   }
+  ::-webkit-scrollbar {
+      width: 0;  /* Remove scrollbar space */
+      background: transparent;  /* Optional: just make scrollbar invisible */
+  }
+
+/*-----LANDING PAGE index.html-----*/
+
+  /*-Landing Text-*/
+
+  .landing-text{
+    vertical-align: 50%;
+    line-height: 90vh;
+  }
+
+  .landing-text:hover{
+    font-family: "Londrina Solid", sans-serif;
+  }
+
+  /*-Background Image-*/
+    /* Code snippet by ntgCleaner @stackoverflow */
+
+    div#bg-img {
+      background-color: #405B34;
+      min-height: 100vh;
+      min-width: 100vw;
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      z-index: -1;
+    }
+
+    img.landing-img {
+      left: 50%;
+      position: absolute;
+      transform: translate(-50%, 0);
+      min-height: 100%;
+      min-width: 100%;
+    }
+
+/*-----HEADER-----*/
+
+  /*-Header Text-*/
+
+  div.QC-header{
+    display: grid;
+    grid-template-columns: 100vw;
+    padding-top: 1em;
+    padding-bottom: 0.25em;
+  }
+
+  a.header-text:hover{
+    color: #64884E; /* light-green */
+  }
+
+  /*-Header Navigation*/
+
+  div.nav-header{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    display: block;
+    width: 100vw;
+    margin: 0 auto;
+    padding-bottom: 0.5em;
+    text-align: center;
+  }
+
+  /*-Dropdown Menu-*/
+    /* Code snippets by W3schools */
+
+    .dropdown{
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropbtn{
+      padding: 16px;
+      border: none;
+      color: #FFF8C8; /* light-yellow */
+      background-color: #415B34; /* mid-green-bg */
+      font-family: "Londrina Solid";
+      font-weight: 300;
+      font-type: normal;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      min-width: 100%;
+      z-index: 1;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+      font-family: "Libre Franklin", sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16;
+      background-color: #64884E; /* light-green-bg */
+    }
+
+    .dropdown-content a {
+      padding: 20px 16px;
+      display: block;
+      color: #FFF8C8; /* light-yellow */
+      text-decoration: none;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #415B34; /* mid-green-bg */
+      border-radius: 30px;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown:hover .dropbtn {
+      background-color: #64884E; /* light-green-bg */
+      border: 0px;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+    }
+
+/*-----TEXT STYLES-----*/
+
+  /*-----Heading/Subheading Styles-----*/
+
+  h1{
+    text-align: center;
+    cursor: pointer;
+  }
+
+  h1 a.landing-text{ /* LOR-400 FS-120 */
+    font-family: "Londrina Outline", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: #FFF8C8; /* light-yellow */
+    text-decoration: none;
+    font-size: 120px;
+  }
+
+  h1 a.header-text{ /*LSR-400 FS-50*/
+    text-decoration: none;
+    color: #FFF8C8; /* light-yellow */
+    font-family: "Londrina Solid", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+  }
+
+  h2{ /* LSR-400, mid-green, FS-28 */
+    font-family: "Londrina Solid", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 150%;
+    padding-bottom: 0.25em;
+  }
+
+  h3{ /* LSL-300, light-green, FS-22 */
+    font-family: "Londrina Solid", sans-serif;
+    font-style: normal;
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 150%;
+    padding-top: 1em;
+    padding-bottom: 0.25em;
+    color: #64894E;
+  }
+
+  h4{ /* LFB-700, light-green, FS-16 */
+    font-family: "Libre Franklin", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 150%;
+    padding-top: 1em;
+    padding-bottom: 0.25em;
+    color: #64894E;
+  }
+
+  /*-----Paragraph Styles-----*/
+
+  .body-copy{ /* LFL-300, mid-green, FS-15 */
+     font-family: "Libre Franklin", sans-serif;
+     font-weight: 300;
+     font-style: normal;
+     font-size: 15px;
+  }
+
+  /*-----Asides Styles-----*/
+
+  aside.asterix{ /* LFL-300, mid-green, FS-12 */
+    font-family: "Libre Franklin", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+  }
+
+  .quote{ /* LSL-300, light-yellow, mid-green-bg, FS-16 */
+    font-family: 'Londrina Solid';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 130%;
+    border: 1px solid none;
+    border-radius: 37px;
+    padding: 10px 70px;
+    width: 1fr;
+    margin: 1em auto;
+    color: #FFF8C8; /* light-yellow */
+    background-color: #415B34; /* mid-green-bg */
+    text-align: center;
+  }
+
+  /*-Lists-*/
+
+    /*-Text List-*/
+
+    ul.text-list{ /* LFL-300, mid-green, FS-12 */
+      list-style: disc;
+      margin: 1em;
+    }
+
+    /*-Link List-*/
+
+    ul.link-list{
+      color: #415B34; /* mid-green arrow */
+      list-style-type: "\2192";
+      margin: 1em;
+    }
+
+    a.link-out{
+      text-decoration: none;
+      color: #415B34; /* mid-green */
+    }
+
+    a.link-out:hover{
+      color: #64894E; /* light-green */
+      text-decoration: underline;
+    }
+
+/*-----HEX COLORS STYLES-----*/
+
+   /*-YELLOW-*/
+
+    /* Light Yellow */
+
+    .light-yellow{
+      color: #FFF8C8;
+    }
+
+    .light-yellow-bg{
+      background-color: #FFF8C8;
+    }
+
+    /*-GREEN-*/
+
+      /*-Light Green-*/
+
+      .light-green{
+        color: #64894E;
+      }
+
+      .light-green-bg{
+        background-color: #64894E;
+      }
+
+      /*-Mid Green-*/
+
+      .mid-green{
+        color: #415B34;
+      }
+
+      .mid-green-bg{
+        background-color: #415B34;
+      }
+
+/*-----TEXT ALIGN STYLES-----*/
+
+.TA-center{
+  text-align: center;
+}
+
+/*-----TEXT DECORATION STYLES-----*/
+
+.TDECO-none{
+  text-decoration: none;
+}
+
+/*-----GRIDS-----*/
+
+  /*-MAIN HALF SPLIT GRID CONTAINER-*/
+
+  div.main-grid-container{
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    grid-auto-rows: auto;
+    gap: 1em;
+    margin: 20px;
+  }
+
+    /* Margins */
+
+      div.left-margin{
+        grid-column: 1/2;
+      }
+
+      div.right-margin{
+        grid-column: 4/5;
+      }
+
+    /* Text */
+
+    div.left-container-text{
+      grid-column: 2/3;
+    }
+
+    div.right-container-text{
+      grid-column: 3/4;
+    }
+
+    div.body-copy-width{
+      max-width: 530px;
+    }
+
+    /* Images */
+
+    div.left-container-img{
+      align-items: center;
+      grid-column: 2/3;
+      padding: 1em;
+    }
+
+    div.right-container-img{
+      align-items: center;
+      grid-column: 3/4;
+      padding: 1em;
+    }
+
+    img.img-size{
+      width: 94%;
+      height: auto;
+      margin: 1em;
+    }
+
+  /*-ALTERNATIVE CENTERED GRID-*/
+
+  div.alt-grid-container{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-auto-rows: auto;
+    border: 1px solid black;
+    gap: 1em;
+    margin: 20px;
+  }
+
+  div.alt-mid-container{
+    grid-column: 2/3;
+    border: 1px solid black;
+  }
+
+    /* Right Alt Margin */
+
+    div.right-alt-margin{
+      grid-column: 3/4;
+    }
+
+/*-------------------------------CLEANED UP CODE ABOVE-------------------------------*/
 
 iframe{
   width: 100%;
@@ -179,164 +510,6 @@ input[type="radio"]{
 
 /* END OF CODE BY GREATSTACK @YOUTUBE */
 
-/* CODE BY NTGCLEANER @STACK OVERFLOW*/
-
-div#bg-img {
-  background-color: #405B34;
-  min-height: 100vh;
-  min-width: 100vw;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  z-index: -1;
-}
-
-img.landing-img {
-  left: 50%;
-  position: absolute;
-  transform: translate(-50%, 0);
-  min-height: 100%;
-  min-width: 100%;
-}
-
-/* END OF CODE BY NTGCLEANER @STACK OVERFLOW*/
-
-.landing-header{
-  font-family: "Londrina Outline", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 120px;
-  color: #F7F1D2;
-  text-align: center;
-  vertical-align: 50%;
-  text-decoration: none;
-  line-height: 90vh;
-}
-
-.landing-header:hover{
-  font-family: "Londrina Solid";
-  cursor: pointer;
-  transform: translateY(-0.75rem);
-}
-
-/* COLORS
-
-EXTRA LIGHT YELLOW #F7F1D2
-LIGHT YELLOW #FFF9C7
-DARK GREEN #415B34
-LIGHT GREEN #64884E
-EXTRA LIGHT GREEN #A6C98F
-
-*/
-
-/* HEADER */
-
-div.QC-header{
-  display: grid;
-  grid-template-columns: 100vw;
-  background: #415B34;
-  padding-top: 1em;
-  padding-bottom: 0.25em;
-}
-
-a.header1{
-  text-decoration: none;
-  color: #FFF9C7;
-}
-
-a.header1:hover{
-  color: #64884E;
-}
-
-h1{
-  text-align: center;
-  font-family: "Londrina Solid";
-  font-size: 50px;
-  font-style: normal;
-  font-weight: 400;
-}
-
-/* DROPDOWN NAV */
-
-div.nav-header{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  display: block;
-  width: 100vw;
-  margin: 0 auto;
-  text-align: center;
-  background: #415B34;
-  padding-bottom: 0.5em;
-}
-
-/* CODE BELOW PROVIDED BY W3 SCHOOLS https://www.w3schools.com/css/css_dropdowns.asp */
-.dropbtn {
-  background-color: #415B34;
-  color: #FFF9C7;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-  font-family: "Londrina Solid";
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 300;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-  font-family: "Libre Franklin", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 16px;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #64884E;
-  min-width: 100%;
-  z-index: 1;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
-}
-
-.dropdown-content a {
-  color: #FFF9C7;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content a:hover {
-  background-color: #415B34;
-  border-radius: 30px;
-}
-
-#community {
-  border-radius: 30px;
-}
-
-a.community{
- text-decoration: none;
- color: #FFF9C7;
- }
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.dropdown:hover .dropbtn {
-  background-color: #64884E;
-  border: 0px;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
-}
-
-/* END OF CODE BY W3 SCHOOLS https://www.w3schools.com/css/css_dropdowns.asp */
-
 /* SOURCES TEXT FORMAT */
 
 .source-text{
@@ -374,25 +547,6 @@ a.sources-button:hover{
   cursor: pointer;
 }
 
-/* ALT CENTERED GRID */
-
-div.alt-grid-container{
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-auto-rows: auto;
-  border: 1px solid black;
-  gap: 1em;
-  margin: 20px;
-}
-
-div.alt-mid-container{
-  grid-column: 2/3;
-  border: 1px solid black;
-}
-
-div.right-alt-margin{
-  grid-column: 3/4;
-}
 
 /* TABLE COMMMUNITY */
 
@@ -413,142 +567,6 @@ div.tab-col1{
 div.tab-col2{
   grid-column: 2/3;
   border: 1px solid black;
-}
-
-/* MAIN GRID */
-
-div.main-grid-container{
-  display: grid;
-  grid-template-columns: 1fr 2fr 2fr 1fr;
-  grid-auto-rows: auto;
-  gap: 1em;
-  margin: 20px;
-}
-
-/* LEFT CONTAINER */
-
-div.left-margin{
-  grid-column: 1/2;
-}
-
-div.left-container-img{
-  align-items: center;
-  grid-column: 2/3;
-  padding: 1em;
-  }
-
-div.left-container-text{
-  grid-column: 2/3;
-  }
-
-img.L-img, img.R-img{
-  width: 94%;
-  height: auto;
-  margin: 1em;
-  }
-
-/* RIGHT CONTAINER */
-
-div.right-margin{
-  grid-column: 4/5;
-}
-
-div.right-container-text{
-  grid-column: 3/4;
-  grid-row: ;
-  }
-
-div.right-container-img{
-  align-items: center;
-  grid-column: 3/4;
-  padding: 1em;
-  }
-
-div.R-text, div.L-text{
-  max-width: 530px;
-  }
-
-/* TEXT STYLE */
-
-p.body-copy{
-   font-family: "Libre Franklin";
-   font-size: 15px;
-   color: #415B34;  
-}
-
-h2{
-  color: #415B34;  
-  font-family: "Londrina Solid";
-  font-size: 28px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 150%;
-  padding-bottom: 0.25em;
-}
-
-h3{
-  color: #64884E; 
-  font-family: "Londrina Solid";
-  font-size: 22px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 150%;
-  padding-top: 1em;
-  padding-bottom: 0.25em;
-}
-
-h4{
-  color: #64884E;  
-  font-family: "Libre Franklin", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 16px;
-  line-height: 150%;
-  padding-top: 1em;
-  padding-bottom: 0.25em;
-}
-
-ul.text-list{
-  font-family: "Libre Franklin";
-  font-size: 15px;
-  color: #415B34;
-  list-style: disc;
-  margin: 1em;
-}
-
-ul.link-list{
-  font-family: "Libre Franklin";
-  font-size: 15px;
-  color: #64884E;
-  list-style-type: "\2192";
-  margin: 1em;
-}
-
-a.link-out{
-  text-decoration: none;
-  color: #64884E;
-}
-
-a.link-out:hover{
-  color: #415B34;
-  text-decoration: underline;
-}
-
-.quote {
-  color: #FFF8C7;
-  font-family: 'Londrina Solid';
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 130%;
-  text-align: center;
-  border: 1px solid #405B34;
-  background: #405B34;
-  border-radius: 37px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  width: 1fr;
-  margin: 1em auto;
 }
 
 /* NAV FOOTER */
