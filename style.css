@@ -25,12 +25,12 @@ body{
 
   /*-Landing Text-*/
 
-  .landing-text{
+h1 a.landing-text{
     vertical-align: 50%;
     line-height: 90vh;
   }
 
-  .landing-text:hover{
+h1 a.landing-text:hover{
     font-family: "Londrina Solid", sans-serif;
     color: #FFF8C8; /* light-yellow */
   }
@@ -67,7 +67,7 @@ body{
     padding-bottom: 0.25em;
   }
 
-  a.header-text:hover{
+  h1 a.header-text:hover{
     color: #B8BF60; /* yellow-green */
   }
 
