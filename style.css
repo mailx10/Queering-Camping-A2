@@ -590,7 +590,7 @@ a.foot-nav:hover{
   color: #B8BF60; /* yellow-green */
 }
 
-/*-----COLLAPSE VIDEO ATTEMPT-----*/
+/*-----COLLAPSE VIDEOS ATTEMPT-----*/
   /* Code snippets by Code Boxx on Youtube */
 
   /* Hide Checkbox */
@@ -637,3 +637,38 @@ a.foot-nav:hover{
   #vid01:checked + #content { display: block; }
 
   #vid02:checked + #content { display: block; }
+
+  /*-----WORKS CITED LIST-----*/
+
+  a.source-link{
+    text-decoration: none;
+    color: #415B34; /* mid-green */
+    cursor: pointer;
+  }
+
+  a.source-link:hover{
+    text-decoration: underline;
+  }
+
+  p.source-text{
+    line-height: 170%;
+  }
+
+  ul.source-list{
+    /* list-style-type: U+2605;*/
+    list-style-type: "\FF0A";
+    margin-left: 1em;
+  }
+
+/*-----TRANSITIONS-----*/
+
+  img.foot-img:hover{
+    transform: rotate(-15deg);
+    cursor: pointer;
+    transition: 500ms ease;
+  }
+
+  img.foot-img{
+    transition: 500ms ease;
+    }
+
