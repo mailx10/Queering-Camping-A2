@@ -28,7 +28,7 @@
     <!---------------HEADER-TEXT-QUEERING-CAMPING--------------->
     <div class="QC-header">
         <h1>
-            <a class="header-text" href="./index.html">QUEERING CAMPING</a>
+            <a id="header-text" href="./index.html">QUEERING CAMPING</a>
         </h1>
     </div><!--div.QC-header-->
 
@@ -46,11 +46,7 @@
             </div><!--div.dropdown-content-->
     </div><!--div.dropdown-->
     <div class="dropdown">
-        <button class="dropbtn">Community Space</button>
-            <div class="dropdown-content">
-                <a href="./Community.html">Tips & Tricks</a>
-                <a href="./Community.html#contact">Contact Us</a>
-            </div><!--div.dropdown-content-->
+        <a class="community-page" href="./Community.html">Community Space</a>
     </div><!--div.dropdown-->
     </div><!--div.nav-header TA-center-->
 
@@ -87,16 +83,16 @@
                 </p>
 
                     <!---------------TEXT-LIST--------------->
-                    <ul class="text-list body-copy">
-                        <li>Check in on people’s boundaries around substance use.</li>
-                        <li>What people’s sleep schedules look like.</li>
-                        <li>What activities folks would like to do.</li>
-                        <li>What people’s sleep schedules look like.</li>
-                        <li>Sleeping arrangements.</li>
-                        <li>Who has gone camping before and who is new to it.</li>
-                        <li>Food preferences.</li>
-                        <li>Accessibility needs.</li>
-                    </ul>
+                    <div class="container-list">
+                        <div class="box-list">
+                            Check in on people’s boundaries around substance use.
+                        </div>
+                        <div class="box-list">What people’s sleep schedules look like.</div>
+                        <div class="box-list">What activities folks would like to do.</div>
+                        <div class="box-list">Who has gone camping before and who is new to it.</div>
+                        <div class="box-list">Food preferences.</div>
+                        <div class="box-list">Accessibility needs.</div>
+                    </div>
 
                 <!---------------BODY-COPY-PARAGRAPH--------------->
                 <p class="body-copy">
@@ -114,11 +110,20 @@
                     </p>
 
                         <!---------------TEXT-LIST--------------->
-                        <ul class="text-list body-copy">
-                            <li>Look at the park map and try to pick a spot that is near facilities if possible, particularly water stations and washrooms.</li>
-                            <li>If available, look at photos of campsites to determine their privacy level and space for tents.</li>
-                            <li>Keep in mind group members’ accessibility needs and make sure they’re covered. Most popular provincial parks have accessible campsites, hiking trails, and facilities.</li>
-                        </ul>
+                        <div class="container-list">
+                            <div class="box-list">
+                                Check in on people’s boundaries around substance use.
+                            </div>
+                            <div class="box-list">
+                                Look at the park map and try to pick a spot that is near facilities if possible, particularly water stations and washrooms.
+                            </div>
+                            <div class="box-list">
+                                If available, look at photos of campsites to determine their privacy level and space for tents.
+                            </div>
+                            <div class="box-list">
+                                Keep in mind group members’ accessibility needs and make sure they’re covered. Most popular provincial parks have accessible campsites, hiking trails, and facilities.
+                            </div>
+                        </div>
 
                     <!---------------BODY-COPY-PARAGRAPH--------------->
                     <p class="body-copy">
@@ -126,6 +131,9 @@
                     </p>
 
                         <!---------------SUBHEADING-04--------------->
+                        
+                        <div class="section4">
+
                         <h4>
                             Moving Firewood
                         </h4>
@@ -135,12 +143,23 @@
                                 There are many strict regulations regarding the movement of firewood due to the risk of introducing invasive species. Make sure to check the regulations in advance to plan where to acquire firewood.
                             </p>
 
-                                <!---------------LINK-LIST--------------->
-                                <ul class="link-list body-copy">
-                                    <li><a class="link-out light-green" href="https://www.dontmovefirewood.org/map/" target="_blank">Firewood Map</a></li>
-                                </ul>
+                                <!---------------LINK-BUTTON-LIST--------------->
+                                    <!-- code below by __ with class name modifications and div additions by me -->
+                                    <div class="link-btn-container">
+                                        <button class="link-btn">
+                                            <span class="circle">
+                                                <span class="arrow"></span>
+                                            </span>
+                                                <!-- attribute added by me -->
+                                                <a class="link-btn-text" href="https://www.dontmovefirewood.org/map/" target="_blank">Firewood Map</a>
+                                        </button>
+                                    </div>
+                        </div>
 
                         <!---------------SUBHEADING-04--------------->
+                        
+                        <div class="section4">
+
                         <h4>
                             Fire Risk
                         </h4>
@@ -150,10 +169,18 @@
                                 Dry summer climate increases the chance of forest fires. Before you leave, make sure to check on the fire risk status. If the risk is too high, you will not be able to make campfires at the campsite.
                             </p>
 
-                                <!---------------LINK-LIST--------------->
-                                <ul class="link-list body-copy">
-                                    <li><a class="link-out light-green" href="https://www.lioapplications.lrc.gov.on.ca/ForestFireInformationMap/index.html?viewer=FFIM.FFIM&locale=en-CA" target="_blank">Forest Fire Info Map</a></li>
-                                </ul>
+                                <!---------------LINK-BUTTON-LIST--------------->
+                                    <!-- code below by __ with class name modifications and div additions by me -->
+                                    <div class="link-btn-container">
+                                        <button class="link-btn">
+                                            <span class="circle">
+                                                <span class="arrow"></span>
+                                            </span>
+                                                <!-- attribute added by me -->
+                                                <a class="link-btn-text" href="https://www.lioapplications.lrc.gov.on.ca/ForestFireInformationMap/index.html?viewer=FFIM.FFIM&locale=en-CA" target="_blank">Forest Fire Info Map</a>
+                                        </button>
+                                    </div>
+                        </div>
 
                 <!---------------SUBHEADING-03--------------->
                 <h3>
@@ -201,13 +228,35 @@
                                 If you’re queer and would rather stay in community, consider staying at a queer-friendly campsite.
                             </p>
 
-                                <!---------------LINK-LIST--------------->
-                                <ul class="link-list body-copy">
-                                    <li><a class="link-out" href="https://www.cedarscampground.com/" target="_blank">Cedars Campground</a></li>
-                                    <li><a class="link-out" href="https://theridgecamp.ca/" target="_blank">Rainbow Ridge Resort & Campground</a></li>
-                                    <li><a class="link-out" href="https://www.riversidervcampground.com/" target="_blank">Riverside RV Campground</a></li>
-                                    <li><a class="link-out" href="https://get-tothepoint.com/" target="_blank">The Point Resort</a></li>
-                                </ul>
+                                <!---------------LINK-BUTTON-LIST--------------->
+                                    <!-- code below by __ with class name modifications and div additions by me -->
+                                    <div class="link-btn-container">
+                                    <button class="link-btn">
+                                        <span class="circle">
+                                            <span class="arrow"></span>
+                                        </span>
+                                        <!-- attribute added by me -->
+                                        <a class="link-btn-text" href="https://www.cedarscampground.com/" target="_blank">Cedars Campground</a>
+                                    </button>
+                                    <button class="link-btn">
+                                        <span class="circle">
+                                            <span class="arrow"></span>
+                                        </span>
+                                            <a class="link-btn-text" href="https://theridgecamp.ca/" target="_blank">Rainbow Ridge Resort & Campground</a>
+                                    </button>
+                                    <button class="link-btn">
+                                        <span class="circle">
+                                            <span class="arrow"></span>
+                                        </span>
+                                            <a class="link-btn-text" href="https://www.riversidervcampground.com/" target="_blank">Riverside RV Campground</a>
+                                    </button>
+                                    <button class="link-btn">
+                                        <span class="circle">
+                                            <span class="arrow"></span>
+                                        </span>
+                                            <a class="link-btn-text" href="https://get-tothepoint.com/" target="_blank">The Point Resort</a>
+                                    </button>
+                                    </div>
 
                 <!---------------SUBHEADING-03--------------->
                 <h3>
@@ -216,19 +265,36 @@
 
                     <!---------------BODY-COPY-PARAGRAPH--------------->
                     <p class="body-copy">
-                        Be aware of whose land you’re on and its history. Check if there are sacred sites or plants that you should avoid if you’re not a part of that community. See if there’s anything you can do while you are a guest to contribute positively to the land- check out some indigenous-owned businesses in the area (to source natural materials such as food and firewood, for example) and local art galleries to check out. We are so lucky to be able to go camping and access beautiful sites on this land, but it’s important to remember that you are a guest.
+                        Be aware of whose land you’re on and its history. Check if there are sacred sites or plants that you should avoid if you’re not a part of that community. See if there’s anything you can do while you are a guest to contribute positively to the land- check out some indigenous-owned businesses in the area (to source natural materials such as food and firewood, for example) and local art galleries to check out. 
                     </p>
 
-                        <!---------------LINK-LIST--------------->
-                        <ul class="link-list body-copy">
-                            <li><a class="link-out" href="https://www.whose.land/en/where-am-i" target="_blank">Where am I | Whose Land<a></li>
-                            <li><a class="link-out" href="https://www.nativelandconservancy.org/" target="_blank">Native Land Conservancy</a></li>
-                        </ul>
-
-                        <!---------------QUOTE--------------->
+                    <!---------------QUOTE--------------->
                         <aside class="quote">
                             “Connect with indigenous people, their land knowledge is important” -Eden Waaseyaakwe
                         </aside>
+
+                    <p class="body-copy">
+                        We are so lucky to be able to go camping and access beautiful sites on this land, but it’s important to remember that you are a guest.
+                    </p>
+
+
+                        <!---------------LINK-BUTTON-LIST--------------->
+                            <!-- code below by __ with class name modifications and div additions by me -->
+                            <div class="link-btn-container">
+                            <button class="link-btn">
+                                <span class="circle">
+                                    <span class="arrow"></span>
+                                </span>
+                                <!-- attribute added by me -->
+                                <a class="link-btn-text" href="https://www.whose.land/en/where-am-i">Where am I | Whose Land</a>
+                            </button>
+                            <button class="link-btn">
+                                <span class="circle">
+                                    <span class="arrow"></span>
+                                </span>
+                                    <a class="link-btn-text" href="https://www.nativelandconservancy.org/">Native Land Conservancy</a>
+                            </button>
+                            </div>
 
                 <!---------------SUBHEADING-03--------------->
                 <h3>
@@ -242,7 +308,7 @@
                     <li>Share your location on your phone for the duration of the trip. It may not always be super accurate, but it helps.</li>
                 </ul>
     </div><!--div.body-copy-width/mid-green-->
-    </div><!-- div.right-container -->
+    </div><!--div.right-container-text-->
 
     <!---------------RIGHT-MARGIN--------------->
     <div class="right-margin">

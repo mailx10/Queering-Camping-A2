@@ -1,3 +1,183 @@
+
+/*-----SMOOTH SCROLLING-----*/
+  /*-Code snippet by Tyler Potts on Youtube-*/
+
+html{
+  scroll-behavior: smooth;
+}
+
+
+.quote:hover{
+  transform: scale(1.01);
+  color: #415B34; /* mid-green */
+  border: 2px dashed #415B34; /* mid-green */
+}
+
+/*-----LINK-BUTTONS-----*/
+  /*-Code snippet by _-*/
+
+
+/* background-color: #415B34; mid-green */
+
+.link-btn-container{
+  display: flex;
+  flex-flow: wrap column;
+  justify-content: center;
+  align-items: flex-start;
+  /* added/modified by me */
+  margin-top: 10px;
+}
+
+.link-btn{
+  position: relative;
+  z-index: 1;
+  /* modified/styled by me */
+  width: 100%;
+  height: 40px;
+  border: 1px solid #FFF8C8; /* light-yellow */;
+  border-radius: 50px;
+  background-color: #FFF8C8; /* light-yellow */
+  /*added by me*/
+  cursor: pointer;
+  margin: 2px 0px;
+}
+
+.circle{
+  position: absolute;
+  z-index: 2;
+  transition: 500ms cubic-bezier(1,0,0.8,1);
+  /* modified/styled by me */
+  width: 40px;
+  height: 40px;
+  background-color: #B8BF60; /* yellow-green-bg */
+  border-radius: 50px;
+  left: -1px;
+  top: -1px;
+}
+
+.link-btn:hover .circle{
+  width: 100%;
+  }
+
+.arrow{
+  position: absolute;
+  transform: rotate(45deg);
+  /* modified by me */
+  border-top: 2px solid #FFF8C8; /* light-yellow */
+  border-right: 2px solid #FFF8C8; /* light-yellow */
+  width: 10px;
+  height: 10px;
+  top: 15px;
+  left: 11px;
+  transition: 500ms;
+  }
+
+.link-btn:hover .arrow{
+  left: 35px;
+  }
+
+.arrow:before{
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background: #FFF8C8; /* light-yellow */
+  transform: rotate(-45deg);
+  left: -7px;
+  top: 5.5px;
+  opacity: 0;
+  transition: 500ms;
+  }
+
+.link-btn:hover .arrow:before{
+  opacity: 1;
+  }
+
+.link-btn-text{
+  position: absolute;
+  z-index: 3;
+  transition: 500ms;
+  /* added by me */
+  text-decoration: none;
+  /* modified by me */
+  color: #415B34; /* mid-green */
+  top: 0;
+  left: 45px;
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 15px;
+  line-height: 39px;
+  font-weight: 400;
+  }
+
+.link-btn:hover .link-btn-text{
+  /* modified by me */
+  color: #FFF8C8; /* light-yellow */
+  /* added by me */
+  left: 69px;
+  }
+
+/*---*/
+
+.container-list{
+  width:100%;
+  margin: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  }
+
+  .box-list{
+  width: 100%;
+  min-height: 100%;
+  background-color: #B8BF60; /* yellow-green-bg */
+  margin: 3px;
+  transition: 500ms ease;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 10px 20px;
+  text-align: left;
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  }
+
+  .box-list:hover{
+    transform: scale(1.1);
+    background-color: #415B34; /* mid-green */
+    color: #FFF8C8; /* light-yellow */
+    }
+
+  .container{
+  width:90%;
+  padding: 10px;
+  margin-bottom: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  }
+
+  .box{
+  width: 110px;
+  min-height: 100%;
+  background: orange;
+  margin: 5px;
+  transition: 500ms ease;
+  border-radius: 20px;
+  padding: 10px;
+  text-align: center;
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  }
+
+  .box:hover{
+    transform: scale(1.1);
+    background-color: #415B34; /* mid-green */
+    color: #FFF8C8; /* light-yellow */
+    }
+
+
+
 /*-------------------------------CLEANED UP CODE BELOW-------------------------------*/
 
 * {
@@ -6,7 +186,7 @@
 }
 
 body{
-  background: #FFF9C7;
+  background-color: #FFF9C7; /* light-yellow */
 }
 
 /*-----DISABLE HORIZONTAL SCROLL, HIDE VERTICAL SCROLLBAR-----*/
@@ -25,14 +205,27 @@ body{
 
   /*-Landing Text-*/
 
-h1 a.landing-text{
-    vertical-align: 50%;
-    line-height: 90vh;
+div.landing{
+  text-align: center;
   }
 
-h1 a.landing-text:hover{
-    font-family: "Londrina Solid", sans-serif;
+h1 a#landing-text{
+    vertical-align: 50%;
+    line-height: 90vh;
+    font-family: "Londrina Outline", sans-serif;
+    font-weight: 400;
     color: #FFF8C8; /* light-yellow */
+    text-decoration: none;
+    font-size: 120px;
+    text-align: center;
+  }
+
+h1 a#landing-text:hover{
+    font-family: "Londrina Solid", sans-serif;
+    font-weight: 400;
+    color: #FFF8C8; /* light-yellow */
+    text-decoration: none;
+    font-size: 120px;
   }
 
   /*-Background Image-*/
@@ -60,17 +253,6 @@ h1 a.landing-text:hover{
 
   /*-Header Text-*/
 
-  div.QC-header{
-    display: grid;
-    grid-template-columns: 100vw;
-    padding-top: 1em;
-    padding-bottom: 0.25em;
-  }
-
-  h1 a.header-text:hover{
-    color: #B8BF60; /* yellow-green */
-  }
-
   /*-Header Navigation*/
 
   div.nav-header{
@@ -84,24 +266,70 @@ h1 a.landing-text:hover{
     text-align: center;
   }
 
+h1 a#header-text{
+    text-decoration: none;
+    color: #FFF8C8; /* light-yellow */
+    font-family: "Londrina Outline", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+  }
+
+h1 a#header-text:hover{
+    color: #FFF8C8; /* light-yellow */
+    font-family: "Londrina Solid", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+  }
+
+  div.QC-header{
+    padding-top: 1em;
+    padding-bottom: 0.25em;
+    text-align: center;
+    display: block;
+  }
+
+
   /*-Dropdown Menu-*/
     /* Code snippets by W3schools */
 
     .dropdown{
       position: relative;
       display: inline-block;
+      transition: 500ms ease;
     }
 
     .dropbtn{
       padding: 16px;
       border: none;
       color: #FFF8C8; /* light-yellow */
-      background-color: #415B34; /* mid-green-bg */
+      background-color: #415B34; /* mid-green */
       font-family: "Londrina Solid";
       font-weight: 300;
       font-type: normal;
       font-size: 20px;
       cursor: pointer;
+      transition: 500ms ease;
+    }
+
+    a.community-page{
+      padding: 16px;
+      border: none;
+      color: #FFF8C8; /* light-yellow */
+      font-family: "Londrina Solid";
+      font-weight: 300;
+      font-type: normal;
+      font-size: 20px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: 500ms ease;
+    }
+
+    a.community-page:hover{
+      background-color: #64884E; /* light-green */
+      border: 0px;
+      border-radius: 30px;
     }
 
     .dropdown-content {
@@ -116,6 +344,7 @@ h1 a.landing-text:hover{
       font-weight: 500;
       font-size: 16;
       background-color: #64884E; /* light-green-bg */
+      transition: 500ms ease;
     }
 
     .dropdown-content a {
@@ -123,15 +352,18 @@ h1 a.landing-text:hover{
       display: block;
       color: #FFF8C8; /* light-yellow */
       text-decoration: none;
+      transition: 500ms ease;
     }
 
     .dropdown-content a:hover {
       background-color: #415B34; /* mid-green-bg */
       border-radius: 30px;
+      transition: 500ms ease;
     }
 
     .dropdown:hover .dropdown-content {
       display: block;
+      transition: 500ms ease;
     }
 
     .dropdown:hover .dropbtn {
@@ -139,40 +371,19 @@ h1 a.landing-text:hover{
       border: 0px;
       border-top-left-radius: 30px;
       border-top-right-radius: 30px;
+      transition: 500ms ease;
     }
 
 /*-----TEXT STYLES-----*/
 
   /*-----Heading/Subheading Styles-----*/
 
-  h1{
-    text-align: center;
-    cursor: pointer;
-  }
-
-  h1 a.landing-text{ /* LOR-400 FS-120 */
-    font-family: "Londrina Outline", sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    color: #FFF8C8; /* light-yellow */
-    text-decoration: none;
-    font-size: 120px;
-  }
-
-  h1 a.header-text{ /*LSR-400 FS-50*/
-    text-decoration: none;
-    color: #FFF8C8; /* light-yellow */
-    font-family: "Londrina Solid", sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 50px;
-  }
 
   h2{ /* LSR-400, mid-green, FS-28 */
     font-family: "Londrina Solid", sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 28px;
+    font-size: 45px;
     line-height: 150%;
     padding-bottom: 0.25em;
   }
@@ -180,7 +391,7 @@ h1 a.landing-text:hover{
   h3{ /* LSL-300, light-green, FS-22 */
     font-family: "Londrina Solid", sans-serif;
     font-style: normal;
-    font-size: 22px;
+    font-size: 28px;
     font-weight: 300;
     line-height: 150%;
     padding-top: 1em;
@@ -192,7 +403,7 @@ h1 a.landing-text:hover{
     font-family: "Libre Franklin", sans-serif;
     font-weight: 700;
     font-style: normal;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 150%;
     padding-top: 1em;
     padding-bottom: 0.25em;
@@ -219,28 +430,35 @@ h1 a.landing-text:hover{
 
   /*-----Asides Styles-----*/
 
-  aside.asterix{ /* LFL-300, mid-green, FS-12 */
-    font-family: "Libre Franklin", sans-serif;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 12px;
-  }
-
   .quote{ /* LSL-300, light-yellow, mid-green-bg, FS-16 */
     font-family: 'Londrina Solid';
     font-size: 16px;
     font-style: normal;
     font-weight: 300;
     line-height: 130%;
-    border: 1px solid #64894E;
+    border: 2px dashed #64894E;
     border-radius: 37px;
     padding: 10px 70px;
     width: 1fr;
     margin: 1em auto;
-    color: #FFF8C8; /* light-yellow */
-    background-color: #415B34; /* mid-green-bg */
+    color: #64884E; /* light-green */
+    /* background-color: #415B34; mid-green-bg */
     text-align: center;
+    transition: 500ms ease;
   }
+
+.hide {
+  display: none;
+}
+
+.myDIV:hover + .hide {
+  display: block;
+  font-family: "Libre Franklin", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  margin-top: 10px;
+}
 
   /*-Lists-*/
 
@@ -361,12 +579,6 @@ h1 a.landing-text:hover{
       padding: 1em;
     }
 
-    div.right-container-img{
-      align-items: center;
-      grid-column: 3/4;
-      padding: 1em;
-    }
-
     img.img-size{
       width: 94%;
       height: auto;
@@ -424,11 +636,13 @@ h1 a.landing-text:hover{
   border: none;
   border-radius: 30px;
   cursor: pointer;
+  transition: 500ms ease;
 }
 
 input[type="submit"]:hover {
   background-color: #B8BF60; /* yellow-green-bg */
   color: #415B34; /* mid-green */
+  width: 46%;
 }
 
 /*-----COLLAPSIBLE-TIPS-SECTION-----*/
@@ -497,10 +711,14 @@ input[type="submit"]:hover {
     content: '-';
   }
 
+
 /*-----BOTTOM-NAVIGATION-----*/
 
 a.nav-button{
+  display: inline-block;
   text-decoration: none;
+  font-family: "Libre Franklin", sans-serif;
+  font-weight: 500;
   font-size: 18px;
   color: #64894E; /* light-green */
   border: 1px solid #64894E;
@@ -509,12 +727,14 @@ a.nav-button{
   margin: 0.25em;
   cursor: pointer;
   align-items: center;
+  transition: 500ms ease-out;
 }
 
-a.nav-button:hover{
+.nav-button:hover{
   color: #415B34; /* mid-green */
   background-color: #B8BF60; /* yellow-green */
   border: 1px solid #B8BF60;
+  transform: translateY(-4px)
 }
 
 div.nav-footer{
@@ -584,6 +804,7 @@ a.foot-nav{
   font-weight: 400;
   font-size: 14px;
   cursor: pointer;
+  transition: 500ms ease;
 }
 
 a.foot-nav:hover{
@@ -603,6 +824,8 @@ a.foot-nav:hover{
     display: block;
     width: 95%; 
     padding: 10px 15px;
+    transition: 500ms ease;
+    cursor: pointer;
   }
 
   #togL{
@@ -615,11 +838,11 @@ a.foot-nav:hover{
     border-top: 5px solid #FFF8C8; /* light-yellow */
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    cursor: pointer;
   }
 
   #togL:hover{
     background-color: #415B34; /* mid-green */
+    transition: 500ms ease;
   }
 
   #content{
@@ -634,9 +857,9 @@ a.foot-nav:hover{
   }
 
   /* Only show when checked */
-  #vid01:checked + #content { display: block; }
+  #vid01:checked + #content { display: block;}
 
-  #vid02:checked + #content { display: block; }
+  #vid02:checked + #content { display: block;}
 
   /*-----WORKS CITED LIST-----*/
 
