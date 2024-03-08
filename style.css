@@ -1,235 +1,112 @@
-
-/*-----SMOOTH SCROLLING-----*/
-  /*-Code snippet by Tyler Potts on Youtube-*/
-
-html{
-  scroll-behavior: smooth;
-}
-
-
-.quote:hover{
-  transform: scale(1.01);
-  color: #415B34; /* mid-green */
-  border: 2px dashed #415B34; /* mid-green */
-}
-
-/*-----LINK-BUTTONS-----*/
-  /*-Code snippet by _-*/
-
-
-/* background-color: #415B34; mid-green */
-
-.link-btn-container{
-  display: flex;
-  flex-flow: wrap column;
-  justify-content: center;
-  align-items: flex-start;
-  /* added/modified by me */
-  margin-top: 10px;
-}
-
-.link-btn{
-  position: relative;
-  z-index: 1;
-  /* modified/styled by me */
-  width: 100%;
-  height: 40px;
-  border: 1px solid #FFF8C8; /* light-yellow */;
-  border-radius: 50px;
-  background-color: #FFF8C8; /* light-yellow */
-  /*added by me*/
-  cursor: pointer;
-  margin: 2px 0px;
-}
-
-.circle{
-  position: absolute;
-  z-index: 2;
-  transition: 500ms cubic-bezier(1,0,0.8,1);
-  /* modified/styled by me */
-  width: 40px;
-  height: 40px;
-  background-color: #B8BF60; /* yellow-green-bg */
-  border-radius: 50px;
-  left: -1px;
-  top: -1px;
-}
-
-.link-btn:hover .circle{
-  width: 100%;
-  }
-
-.arrow{
-  position: absolute;
-  transform: rotate(45deg);
-  /* modified by me */
-  border-top: 2px solid #FFF8C8; /* light-yellow */
-  border-right: 2px solid #FFF8C8; /* light-yellow */
-  width: 10px;
-  height: 10px;
-  top: 15px;
-  left: 11px;
-  transition: 500ms;
-  }
-
-.link-btn:hover .arrow{
-  left: 35px;
-  }
-
-.arrow:before{
-  content: "";
-  position: absolute;
-  width: 20px;
-  height: 2px;
-  background: #FFF8C8; /* light-yellow */
-  transform: rotate(-45deg);
-  left: -7px;
-  top: 5.5px;
-  opacity: 0;
-  transition: 500ms;
-  }
-
-.link-btn:hover .arrow:before{
-  opacity: 1;
-  }
-
-.link-btn-text{
-  position: absolute;
-  z-index: 3;
-  transition: 500ms;
-  /* added by me */
-  text-decoration: none;
-  /* modified by me */
-  color: #415B34; /* mid-green */
-  top: 0;
-  left: 45px;
-  font-family: "Libre Franklin", sans-serif;
-  font-size: 15px;
-  line-height: 39px;
-  font-weight: 400;
-  }
-
-.link-btn:hover .link-btn-text{
-  /* modified by me */
-  color: #FFF8C8; /* light-yellow */
-  /* added by me */
-  left: 69px;
-  }
-
-/*---*/
-
-.container-list{
-  width:100%;
-  margin: 10px 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  }
-
-  .box-list{
-  width: 100%;
-  min-height: 100%;
-  background-color: #B8BF60; /* yellow-green-bg */
-  margin: 3px;
-  transition: 500ms ease;
-  border-top-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  padding: 10px 20px;
-  text-align: left;
-  font-family: "Libre Franklin", sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  }
-
-  .box-list:hover{
-    transform: scale(1.1);
-    background-color: #415B34; /* mid-green */
-    color: #FFF8C8; /* light-yellow */
-    }
-
-  .container{
-  width:90%;
-  padding: 10px;
-  margin-bottom: 5px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  }
-
-  .box{
-  width: 110px;
-  min-height: 100%;
-  background: orange;
-  margin: 5px;
-  transition: 500ms ease;
-  border-radius: 20px;
-  padding: 10px;
-  text-align: center;
-  font-family: "Libre Franklin", sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  }
-
-  .box:hover{
-    transform: scale(1.1);
-    background-color: #415B34; /* mid-green */
-    color: #FFF8C8; /* light-yellow */
-    }
-
-
-
-/*-------------------------------CLEANED UP CODE BELOW-------------------------------*/
+/*-----RESET PADDING + MARGINS-----*/
 
 * {
     padding: 0;
     margin: 0;
 }
 
+/*-----COLORS-----*/
+  /*
+    light-yellow: #FFF8C8
+    mid-green: #415B34
+    light-green: #64884E
+    yellow-green: #B8BF60
+  */
+
+    /*-mid-green-*/
+
+    .mid-green{
+      color: #415B34;
+    }
+
+    .mid-green-bg{
+      background-color: #415B34;
+    }
+
+/*-----BASE BACKGROUND COLOR FOR BODY-----*/
+
 body{
   background-color: #FFF9C7; /* light-yellow */
 }
 
+
 /*-----DISABLE HORIZONTAL SCROLL, HIDE VERTICAL SCROLLBAR-----*/
-  /*-Code snippet by Anirban Bhui @stackoverflow-*/
+  /*
+  Code by Anirban Bhui on Stackoverflow
+  Link: https://stackoverflow.com/questions/16670931/hide-scroll-bar-but-while-still-being-able-to-scroll
+  */
 
   html {
       overflow: scroll;
       overflow-x: hidden;
   }
+
   ::-webkit-scrollbar {
       width: 0;  /* Remove scrollbar space */
-      background: transparent;  /* Optional: just make scrollbar invisible */
+      background: transparent; /* Make scrollbar invisible */
   }
+
+/*-----SMOOTH SCROLLING-----*/
+  /*
+  Code by Tyler Potts on Youtube
+  Link: https://youtu.be/fYGe-SuFAHU?si=DN1dx8MgtBgoQd5F
+  Modified __.
+  Added __.
+  */
+
+html{
+  scroll-behavior: smooth;
+}
+
 
 /*-----LANDING PAGE index.html-----*/
 
+  /*-Landing Container*/
+
+  div.landing{
+    display: flex;
+    /* align text both vertically + horizontally */
+    height: 100vh;
+    align-items: center;
+    }
+
+  /*-Landing Button-*/
+
+  .QC-btn{
+    background-color: transparent;
+    cursor: pointer;
+    /* allow scale up without cropping out text and center-align text */
+    width: 100vw;
+    /* remove button border*/
+    border: none;
+    }
+
   /*-Landing Text-*/
 
-div.landing{
-  text-align: center;
-  }
-
-h1 a#landing-text{
-    vertical-align: 50%;
-    line-height: 90vh;
+  a.landing-text{
     font-family: "Londrina Outline", sans-serif;
     font-weight: 400;
     color: #FFF8C8; /* light-yellow */
     text-decoration: none;
     font-size: 120px;
     text-align: center;
-  }
+    transition: 500ms ease;
+    /* allows transition timing + ease effects to apply */
+    display: inline-block;
+    }
 
-h1 a#landing-text:hover{
+  a.landing-text:hover{
     font-family: "Londrina Solid", sans-serif;
-    font-weight: 400;
-    color: #FFF8C8; /* light-yellow */
-    text-decoration: none;
-    font-size: 120px;
-  }
+    /* scales up on hover */
+    transform: scale(1.1);
+    }
 
-  /*-Background Image-*/
-    /* Code snippet by ntgCleaner @stackoverflow */
+  /*-Landing Background Image-*/
+    /*
+    Code by ntgCleaner on Stackoverflow
+    Link: https://stackoverflow.com/questions/31728504/how-to-center-crop-a-full-screen-background-image
+    Modified and added class names, background color, min-height + min-width units.
+    */
 
     div#bg-img {
       background-color: #405B34;
@@ -249,15 +126,41 @@ h1 a#landing-text:hover{
       min-width: 100%;
     }
 
-/*-----HEADER-----*/
-
+/*-----HEADER + NAV BAR-----*/
+  
   /*-Header Text-*/
 
-  /*-Header Navigation*/
+  a.header-text{
+    text-decoration: none;
+    color: #FFF8C8; /* light-yellow */
+    font-family: "Londrina Outline", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    text-align: center;
+    /* Smoother transition */
+    transition: 500ms ease;
+    display: inline-block;
+  }
+
+  a.header-text:hover{
+    /* Change to solid type on hover */
+    font-family: "Londrina Solid", sans-serif;
+    /* Slight scale up on hover */
+    transform: scale(1.02);
+  }
+
+  /*-Header Text Container-*/
+
+  div.QC-header{
+    padding-top: 1em;
+    padding-bottom: 0.25em;
+    display: block;
+  }
+
+  /*-Header Navigation Bar*/
 
   div.nav-header{
-    padding: 0;
-    margin: 0;
     box-sizing: border-box;
     display: block;
     width: 100vw;
@@ -266,120 +169,105 @@ h1 a#landing-text:hover{
     text-align: center;
   }
 
-h1 a#header-text{
-    text-decoration: none;
-    color: #FFF8C8; /* light-yellow */
-    font-family: "Londrina Outline", sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 50px;
-  }
+    /*-Dropdown Menu-*/
+      /* 
+      Code by W3Schools 
+      Link: https://www.w3schools.com/css/css_dropdowns.asp
+      Modified colors, font properties, class names.
+      Added transitions, border radius, added and styled 'Community Space' button.
+      Removed box shadows.
+      */
 
-h1 a#header-text:hover{
-    color: #FFF8C8; /* light-yellow */
-    font-family: "Londrina Solid", sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 50px;
-  }
+      /* The container <div> - needed to position the dropdown content */
+      .dropdown{
+        position: relative;
+        display: inline-block;
+        transition: 500ms ease;
+      }
 
-  div.QC-header{
-    padding-top: 1em;
-    padding-bottom: 0.25em;
-    text-align: center;
-    display: block;
-  }
+      /* Style The Dropdown Button */
+      .dropbtn{
+        padding: 16px;
+        border: none;
+        color: #FFF8C8; /* light-yellow */
+        background-color: #415B34; /* mid-green */
+        font-family: "Londrina Solid", sans-serif;
+        font-weight: 300;
+        font-type: normal;
+        font-size: 20px;
+        cursor: pointer;
+      }
 
+      /* Dropdown Content (Hidden by Default) */
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        min-width: 100%;
+        z-index: 1;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        font-family: "Libre Franklin", sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        background-color: #64884E; /* light-green-bg */
+      }
 
-  /*-Dropdown Menu-*/
-    /* Code snippets by W3schools */
+      /* Links inside the dropdown */
+      .dropdown-content a {
+        padding: 20px 16px;
+        display: block;
+        color: #FFF8C8; /* light-yellow */
+        text-decoration: none;
+      }
 
-    .dropdown{
-      position: relative;
-      display: inline-block;
-      transition: 500ms ease;
-    }
+      /* Change color of dropdown links + radius on hover */
+      .dropdown-content a:hover {
+        background-color: #415B34; /* mid-green-bg */
+        border-radius: 30px;
+        transition: 500ms ease;
+      }
 
-    .dropbtn{
-      padding: 16px;
-      border: none;
-      color: #FFF8C8; /* light-yellow */
-      background-color: #415B34; /* mid-green */
-      font-family: "Londrina Solid";
-      font-weight: 300;
-      font-type: normal;
-      font-size: 20px;
-      cursor: pointer;
-      transition: 500ms ease;
-    }
+      /* Show the dropdown menu on hover */
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
 
-    a.community-page{
-      padding: 16px;
-      border: none;
-      color: #FFF8C8; /* light-yellow */
-      font-family: "Londrina Solid";
-      font-weight: 300;
-      font-type: normal;
-      font-size: 20px;
-      cursor: pointer;
-      text-decoration: none;
-      transition: 500ms ease;
-    }
+      /* Change the background color of the dropdown button when the dropdown content is shown */
+      .dropdown:hover .dropbtn {
+        background-color: #64884E; /* light-green-bg */
+        border: 0px;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+        transition: 500ms ease;
+      }
 
-    a.community-page:hover{
-      background-color: #64884E; /* light-green */
-      border: 0px;
-      border-radius: 30px;
-    }
+      /* Community button + hover transition */
+      a.community-page{
+        padding: 16px;
+        border: none;
+        color: #FFF8C8; /* light-yellow */
+        font-family: "Londrina Solid";
+        font-weight: 300;
+        font-type: normal;
+        font-size: 20px;
+        cursor: pointer;
+        text-decoration: none;
+        transition: 500ms ease;
+      }
 
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      min-width: 100%;
-      z-index: 1;
-      border-bottom-left-radius: 30px;
-      border-bottom-right-radius: 30px;
-      font-family: "Libre Franklin", sans-serif;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 16;
-      background-color: #64884E; /* light-green-bg */
-      transition: 500ms ease;
-    }
-
-    .dropdown-content a {
-      padding: 20px 16px;
-      display: block;
-      color: #FFF8C8; /* light-yellow */
-      text-decoration: none;
-      transition: 500ms ease;
-    }
-
-    .dropdown-content a:hover {
-      background-color: #415B34; /* mid-green-bg */
-      border-radius: 30px;
-      transition: 500ms ease;
-    }
-
-    .dropdown:hover .dropdown-content {
-      display: block;
-      transition: 500ms ease;
-    }
-
-    .dropdown:hover .dropbtn {
-      background-color: #64884E; /* light-green-bg */
-      border: 0px;
-      border-top-left-radius: 30px;
-      border-top-right-radius: 30px;
-      transition: 500ms ease;
-    }
+      a.community-page:hover{
+        background-color: #64884E; /* light-green */
+        border: 0px;
+        border-radius: 30px;
+      }
 
 /*-----TEXT STYLES-----*/
 
   /*-----Heading/Subheading Styles-----*/
 
-
-  h2{ /* LSR-400, mid-green, FS-28 */
+  /* Body headings */
+  h2{
     font-family: "Londrina Solid", sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -388,7 +276,7 @@ h1 a#header-text:hover{
     padding-bottom: 0.25em;
   }
 
-  h3{ /* LSL-300, light-green, FS-22 */
+  h3{
     font-family: "Londrina Solid", sans-serif;
     font-style: normal;
     font-size: 28px;
@@ -396,10 +284,10 @@ h1 a#header-text:hover{
     line-height: 150%;
     padding-top: 1em;
     padding-bottom: 0.25em;
-    color: #64894E;
+    color: #64894E; /* light-green */
   }
 
-  h4{ /* LFB-700, light-green, FS-16 */
+  h4{
     font-family: "Libre Franklin", sans-serif;
     font-weight: 700;
     font-style: normal;
@@ -407,137 +295,251 @@ h1 a#header-text:hover{
     line-height: 150%;
     padding-top: 1em;
     padding-bottom: 0.25em;
-    color: #64894E;
+    color: #64894E; /* light-green */
   }
 
-  h5{
+  /* Footer headings */
+  h5{ 
     font-family: "Libre Franklin", sans-serif;
     font-weight: 700;
     font-style: normal;
     font-size: 14px;
-    /* color: #64884E; light-green-bg */
-    color: #B8BF60; /* yellow-green-bg */
+    color: #B8BF60; /* yellow-green */
   }
 
   /*-----Paragraph Styles-----*/
 
-  .body-copy{ /* LFL-300, mid-green, FS-15 */
+  .body-copy{
      font-family: "Libre Franklin", sans-serif;
      font-weight: 300;
      font-style: normal;
      font-size: 15px;
   }
 
-  /*-----Asides Styles-----*/
+  /*-----Aside Styles-----*/
 
-  .quote{ /* LSL-300, light-yellow, mid-green-bg, FS-16 */
-    font-family: 'Londrina Solid';
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: 130%;
-    border: 2px dashed #64894E;
-    border-radius: 37px;
-    padding: 10px 70px;
-    width: 1fr;
-    margin: 1em auto;
-    color: #64884E; /* light-green */
-    /* background-color: #415B34; mid-green-bg */
-    text-align: center;
-    transition: 500ms ease;
-  }
+    /*-Quotes-*/
 
-.hide {
-  display: none;
+    .quote{
+      font-family: 'Londrina Solid';
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 130%;
+      border: 2px dashed #64894E; /* light-green */
+      border-radius: 37px;
+      padding: 10px 70px;
+      width: 1fr;
+      margin: 1em auto;
+      color: #64884E; /* light-green */
+      text-align: center;
+      transition: 500ms ease;
+    }
+
+    /* color change on hover */
+    .quote:hover{
+      transform: scale(1.01);
+      color: #415B34; /* mid-green */
+      border: 2px dashed #415B34; /* mid-green */
+    }
+
+    /*-Asterix-*/
+
+    /* hide text below asterix by default */
+    .hide-asterix {
+      display: none;
+    }
+
+    .asterix{
+      /* cursor change prompts user to hover */
+      cursor: pointer;
+    }
+
+    /* show text below asterix when hovering over paragraph */
+    .asterix:hover + .hide-asterix{
+      display: block;
+      font-family: "Libre Franklin", sans-serif;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 12px;
+      margin-top: 10px;
+    }
+
+/*-----DECORATIVE-RULES-----*/
+
+.dashed-line{
+  width: 100%;
+  height: 1px;
+  border-top: 1px dashed #64894E; /* light-green */
+  margin: 0.75em 0;
 }
 
-.myDIV:hover + .hide {
-  display: block;
-  font-family: "Libre Franklin", sans-serif;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 12px;
+.solid-line{
+  width: 80%;
+  height: 1px;
+  border-top: 1px solid #B8BF60; /* yellow-green */
+  margin: 0.5em 0;
+}
+
+/*-----LINK-LIST-BUTTONS-----*/
+  /*
+  Code by Code Companion on Youtube
+  Link: https://youtu.be/sk7E8iatZ8w?si=p-gCyn6NAHTicxUh
+  Modified class names, colors, borders, size(width, height), positioning, font properties, 
+    transition length, border radius.
+  Added cursor: pointer, margins, links/attributes, positioning.
+  */
+
+/* layout/distribution of link containers */
+.link-btn-container{
+  display: flex;
+  /* vertical column flow */
+  flex-flow: wrap column;
+  align-items: flex-start;
   margin-top: 10px;
 }
 
-  /*-Lists-*/
-
-    /*-Text List-*/
-
-    ul.text-list{ /* LFL-300, mid-green, FS-12 */
-      list-style: disc;
-      margin: 1em;
-    }
-
-    /*-Link List-*/
-
-    ul.link-list{
-      color: #415B34; /* mid-green arrow */
-      list-style-type: "\2192";
-      margin: 1em;
-    }
-
-    a.link-out{
-      text-decoration: none;
-      color: #415B34; /* mid-green */
-    }
-
-    a.link-out:hover{
-      color: #64894E; /* light-green */
-      text-decoration: underline;
-    }
-
-/*-----HEX COLORS STYLES-----*/
-
-   /*-YELLOW-*/
-
-    /* Light Yellow */
-
-    .light-yellow{
-      color: #FFF8C8;
-    }
-
-    .light-yellow-bg{
-      background-color: #FFF8C8;
-    }
-
-    /*-GREEN-*/
-
-      /*-Light Green-*/
-
-      .light-green{
-        color: #64894E;
-      }
-
-      .light-green-bg{
-        background-color: #64894E;
-      }
-
-      /*-Mid Green-*/
-
-      .mid-green{
-        color: #415B34;
-      }
-
-      .mid-green-bg{
-        background-color: #415B34;
-      }
-
-/*-----TEXT ALIGN STYLES-----*/
-
-.TA-center{
-  text-align: center;
+/* link button style, before hover */
+.link-btn{
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 40px;
+  border: 1px solid transparent;
+  border-radius: 50px;
+  background-color: transparent;
+  cursor: pointer;
+  margin: 2px 0px;
 }
 
-/*-----TEXT DECORATION STYLES-----*/
+/* circle containing arrow style */
+.circle{
+  position: absolute;
+  z-index: 2;
+  transition: 500ms cubic-bezier(1,0,0.8,1);
+  width: 40px;
+  height: 40px;
+  background-color: #B8BF60; /* yellow-green */
+  border-radius: 50px;
+  left: -1px;
+  top: -1px;
+}
 
-.TDECO-none{
+/* circle containing arrow widens to same width as .link-btn container */
+.link-btn:hover .circle{
+  width: 100%;
+  }
+
+/* building arrow inside circle > */
+.arrow{
+  position: absolute;
+  transform: rotate(45deg);
+  border-top: 2px solid #FFF8C8; /* light-yellow */
+  border-right: 2px solid #FFF8C8; /* light-yellow */
+  width: 10px;
+  height: 10px;
+  top: 15px;
+  left: 11px;
+  transition: 500ms;
+}
+
+/* arrow inside circle > translates/shifts to the right on hover */
+.link-btn:hover .arrow{
+  left: 35px;
+}
+
+/* building arrow -> inside circle, invisible before hover */
+.arrow:before{
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background: #FFF8C8; /* light-yellow */
+  transform: rotate(-45deg);
+  left: -7px;
+  top: 5.5px;
+  opacity: 0;
+  transition: 500ms;
+}
+
+/* arrow -> inside circle visible on hover */
+.link-btn:hover .arrow:before{
+  opacity: 1;
+}
+
+/* styling text link inside link-btn container before hover */
+.link-btn-text{
+  position: absolute;
+  z-index: 3;
+  transition: 500ms;
   text-decoration: none;
+  color: #415B34; /* mid-green */
+  top: 0;
+  left: 45px;
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 15px;
+  line-height: 39px;
+  font-weight: 400;
 }
 
-/*-----GRIDS-----*/
+/* styling text inside link-btn container on hover, 
+  adding translate/shift to the right equal to arrow shift on hover */
+.link-btn:hover .link-btn-text{
+  color: #FFF8C8; /* light-yellow */
+  left: 69px;
+}
 
-  /*-MAIN HALF SPLIT GRID CONTAINER-*/
+/*-----TEXT-LIST-BUTTONS-----*/
+  /*
+  Code by Web Zone on Youtube
+  Link: https://www.youtube.com/watch?v=yS9OZyyY4TE
+  Modified class names, colors, borders, size(width, height), positioning, font properties, 
+    transition length, border radius.
+  */
+
+  /* parent container for child list item containers */
+  .container-list{
+    width:100%;
+    margin: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  /* styling boxes holding list items + text inside boxes */
+  .box-list{
+    width: 100%;
+    min-height: 100%;
+    background-color: #B8BF60; /* yellow-green */
+    margin: 3px;
+    transition: 500ms ease;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 10px 20px;
+    text-align: left;
+    font-family: "Libre Franklin", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  /* scale up and change background + text colors on hover */
+  .box-list:hover{
+    transform: scale(1.1);
+    background-color: #415B34; /* mid-green */
+    color: #FFF8C8; /* light-yellow */
+  }
+
+  /*-----STAR-ASTERIX-LIST-----*/
+
+  ul.star-list{
+    /* uses asterix unicode instead of standard bullet pts */
+    list-style-type: "\FF0A";
+    margin-left: 1em;
+  }
+
+  /*-----GRID-LAYOUTS-----*/
+
+  /*-Main Body Split Grid Container (1fr, 2fr, 2fr, 1fr)-*/
 
   div.main-grid-container{
     display: grid;
@@ -547,7 +549,7 @@ h1 a#header-text:hover{
     margin: 20px;
   }
 
-    /* Margins */
+    /* Margins Span */
 
       div.left-margin{
         grid-column: 1/2;
@@ -557,16 +559,13 @@ h1 a#header-text:hover{
         grid-column: 4/5;
       }
 
-    /* Text */
-
-    div.left-container-text{
-      grid-column: 2/3;
-    }
+    /* Text Layout + Span */
 
     div.right-container-text{
       grid-column: 3/4;
     }
 
+    /* Max width for body copy to limit line length */
     div.body-copy-width{
       max-width: 530px;
     }
@@ -585,7 +584,8 @@ h1 a#header-text:hover{
       margin: 1em;
     }
 
-  /*-ALTERNATIVE CENTERED GRID-*/
+
+  /*-Alternative Centered Grid (1fr 2fr 1fr) for Community Space-*/
 
   div.alt-grid-container{
     display: grid;
@@ -595,58 +595,53 @@ h1 a#header-text:hover{
     margin: 20px;
   }
 
-  div.alt-mid-container{
-    grid-column: 2/3;
-  }
+    /* Middle Container Span */
+    div.alt-mid-container{
+      grid-column: 2/3;
+    }
 
-    /* Right Alt Margin */
+    /* Right Alt Margin Span */
 
     div.right-alt-margin{
       grid-column: 3/4;
     }
 
-/*-----DECORATIVE-ELEMENTS-----*/
+/*-----BOTTOM SECTION ABOVE FOOTER-----*/
 
-.horizontal-line{
-  width: 100%;
-  height: 1px;
-  border-top: 1px solid #A6C98F;
-  margin: 0.75em 0;
-}
+  /*-CONTACT-BUTTON-*/
 
-.horizontal-line-02{
-  width: 80%;
-  height: 1px;
-  border-top: 1px solid #B8BF60; /* yellow-green-bg */
-  margin: 0.5em 0;
-}
-
-/*-----CONTACT-BUTTON-----*/
-
+  /* button style before hover */
   input[type=submit] {
-  width: 30%;
-  height: auto;
-  font-family: "Londrina Solid";
-  font-size: 18px;
-  font-weight: 300;
-  margin: 20px;
-  color: #FFF8C8; /* light-yellow */
-  background-color: #64894E; /* light-green */
-  padding: 14px 20px;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: 500ms ease;
-}
+    width: 30%;
+    height: auto;
+    font-family: "Londrina Solid", sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    margin: 20px;
+    color: #FFF8C8; /* light-yellow */
+    background-color: #64894E; /* light-green */
+    padding: 14px 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 500ms ease;
+  }
 
-input[type="submit"]:hover {
-  background-color: #B8BF60; /* yellow-green-bg */
-  color: #415B34; /* mid-green */
-  width: 46%;
-}
+  /* button expands width, text + background colors change on hover */
+  input[type="submit"]:hover {
+    background-color: #B8BF60; /* yellow-green-bg */
+    color: #415B34; /* mid-green */
+    width: 46%;
+  }
 
-/*-----COLLAPSIBLE-TIPS-SECTION-----*/
-  /* Code snippets by GREATSTACK @YOUTUBE */
+/*--------------------------------------------------HERE---------------------------------------------*/
+
+/*-----COLLAPSIBLE-TIPS-&-TRICKS-DIV-----*/
+  /* 
+  Code by GREATSTACK on Youtube 
+  Link: https://www.youtube.com/watch?v=fSkhTd4rpDo
+  Modified colors, font properties, transitions,
+  */
 
   .accordion{
     width: 100%;
@@ -660,10 +655,11 @@ input[type="submit"]:hover {
     border-radius: 20px;
     background-color: #415B34; /* mid-green */
     color: #FFF9C7;
-    font-family: "Libre Franklin";
+    font-family: "Libre Franklin", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
+    transition: 500ms ease;
   }
 
   .accordion li:hover{
@@ -711,7 +707,6 @@ input[type="submit"]:hover {
     content: '-';
   }
 
-
 /*-----BOTTOM-NAVIGATION-----*/
 
 a.nav-button{
@@ -728,13 +723,28 @@ a.nav-button{
   cursor: pointer;
   align-items: center;
   transition: 500ms ease-out;
+  height: 25px;
 }
 
-.nav-button:hover{
+.nav-button-top:hover{
   color: #415B34; /* mid-green */
   background-color: #B8BF60; /* yellow-green */
   border: 1px solid #B8BF60;
   transform: translateY(-4px)
+}
+
+.nav-button-left:hover{
+  color: #415B34; /* mid-green */
+  background-color: #B8BF60; /* yellow-green */
+  border: 1px solid #B8BF60;
+  transform: translateX(-4px)
+}
+
+.nav-button-right:hover{
+  color: #415B34; /* mid-green */
+  background-color: #B8BF60; /* yellow-green */
+  border: 1px solid #B8BF60;
+  transform: translateX(4px)
 }
 
 div.nav-footer{
@@ -791,14 +801,9 @@ div.footer{
   grid-column: 5/6;
 }
 
-img.foot-img{
-  width: 75%;
-  height: auto;
-}
-
 a.foot-nav{
   text-decoration: none;
-  color: #64884E; /* light-green-bg */
+  color: #64884E; /* light-green */
   font-family: "Libre Franklin", sans-serif;
   font-type: normal;
   font-weight: 400;
@@ -861,37 +866,18 @@ a.foot-nav:hover{
 
   #vid02:checked + #content { display: block;}
 
-  /*-----WORKS CITED LIST-----*/
+/*-----FOOTER-IMAGE-----*/
 
-  a.source-link{
-    text-decoration: none;
-    color: #415B34; /* mid-green */
-    cursor: pointer;
+  img.foot-img{
+    width: 70%;
+    height: auto;
+    transition: 500ms ease;
   }
-
-  a.source-link:hover{
-    text-decoration: underline;
-  }
-
-  p.source-text{
-    line-height: 170%;
-  }
-
-  ul.source-list{
-    /* list-style-type: U+2605;*/
-    list-style-type: "\FF0A";
-    margin-left: 1em;
-  }
-
-/*-----TRANSITIONS-----*/
 
   img.foot-img:hover{
     transform: rotate(-15deg);
-    cursor: pointer;
     transition: 500ms ease;
   }
 
-  img.foot-img{
-    transition: 500ms ease;
-    }
+
 

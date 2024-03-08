@@ -18,6 +18,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Londrina+Outline&family=Londrina+Solid:wght@100;300;400;900&display=swap" rel="stylesheet">
+    <!---------------ARROWS--------------->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 
 <!---------------HEADER--------------->
@@ -26,9 +28,7 @@
 
     <!---------------HEADER-TEXT-QUEERING-CAMPING--------------->
     <div class="QC-header">
-        <h1>
-            <a id="header-text" href="./index.html">QUEERING CAMPING</a>
-        </h1>
+        <button class="QC-btn"><a class="header-text" href="./index.html">QUEERING CAMPING</a></button>
     </div><!--div.QC-header-->
 
     <!---------------HEADER-NAVIGATION--------------->
@@ -47,7 +47,7 @@
     <div class="dropdown">
         <a class="community-page" href="./Community.html">Community Space</a>
     </div><!--div.dropdown-->
-    </div><!--div.nav-header TA-center-->
+    </div><!--div.nav-header-->
 
 </div><!--div.mid-green-bg / HEADER-->
 
@@ -60,9 +60,11 @@
 
     <!---------------LEFT-CONTAINER-IMAGES--------------->
     <div class="left-container-img">
-         <img class="img-size" src="./A2-images/cedar-01-green.png" alt="White Cedar">
+         <img class="img-size" src="./A2-images/tent-01-green.png" alt="Tent">
          <img class="img-size" src="./A2-images/camping-chair-01-green.png" alt="Vintage Camping Chair">
-         <img class="img-size" src="./A2-images/picnic-table-01-green.png" alt="Picnic Table">
+         <img class="img-size" src="./A2-images/leaf-01-green.png" alt="Leaf">
+         <img class="img-size" src="./A2-images/wood-01-green.png" alt="Pile of Chopped Wood">
+         <img class="img-size" src="./A2-images/axe-01-green.png" alt="Axe">
     </div><!--div.left-container-img-->
 
     <!---------------RIGHT-CONTAINER-TEXT--------------->
@@ -92,25 +94,38 @@
                     </p>
 
                     <!---------------TEXT-LIST--------------->
-                    <ul class="text-list body-copy">
-                        <li>Look for a nice level surface to pitch your tent. Make sure the area is free from big rocks and sticks and that the ground is completely dry.</li>
-                        <li>Look up and make sure there are no standing dead trees and branches that could fall on your tent.</li>
-                        <li>Lay a tarp (footprint) under your tent. This will help protect your tent from condensation coming off the ground, and keep your tent warmer at night.. Let some of the tarp stick out the front of the tent to leave a spot to leave your shoes before entering the tent.</li>
-                        <li>Ensure that your tent is a good distance from the firepit.</li>
-                        <li>Consider where the entrance and any ‘windows’ of your tent will face.</li>
-                        <li>Consider sun exposure and shade patterns, flow of rain, and the weather during your trip. If the weather will be colder, you’ll want the sun to immediately hit your tent in the morning. If it’s going to be warme,  you’ll want more shade, so the sun hits your tent less and later (it can get really hot and stuffy in a tent.)</li>
-                    </ul>
+                        <div class="container-list">
+                            <div class="box-list">
+                                Look for a nice level surface to pitch your tent. Make sure the area is free from big rocks and sticks and that the ground is completely dry.
+                            </div>
+                            <div class="box-list">
+                                Look up and make sure there are no standing dead trees and branches that could fall on your tent.
+                            </div>
+                            <div class="box-list">
+                                Lay a tarp (footprint) under your tent. This will help protect your tent from condensation coming off the ground, and keep your tent warmer at night.. Let some of the tarp stick out the front of the tent to leave a spot to leave your shoes before entering the tent.
+                            </div>
+                            <div class="box-list">
+                                Ensure that your tent is a good distance from the firepit.
+                            </div>
+                            <div class="box-list">
+                                Consider where the entrance and any ‘windows’ of your tent will face.
+                            </div>
+                            <div class="box-list">
+                                Consider sun exposure and shade patterns, flow of rain, and the weather during your trip. If the weather will be colder, you’ll want the sun to immediately hit your tent in the morning. If it’s going to be warme,  you’ll want more shade, so the sun hits your tent less and later (it can get really hot and stuffy in a tent.)
+                            </div>
+                        </div>
 
                         <!---------------SUBHEADING-04--------------->
                         <h4>
                             Setting up a tarp
                         </h4>
 
-                            <!---------------TEXT-LIST--------------->
-                            <ul class="text-list body-copy">
-                                <li>The rainfly that come with the tent might not be enough if it rains a lot. If the weather calls for heavy rain, set up additional tarps (include tutorial link). This depends on the quality of your tent. If the weather forecast calls for rain, just put up some tarps right away. You don’t want to be doing it in the pouring rain!</li>
-                                <li>Setting up a tarp is an art. While watching tutorials can be helpful, each campsite is different, and may require some improvisation. The most important thing to remember is to slant the tarp so that the water runs AWAY from your tent. Gather some friends and treat it as a team building exercise! If there are no trees available to hang a tarp from, drape it over the top of your tent - it will be better than nothing! What’s camping without a little water?</li>
-                            </ul>
+                            <!---------------BODY-COPY-PARAGRAPH--------------->
+                            <p class="body-copy">
+                                The rainfly that come with the tent might not be enough if it rains a lot. If the weather calls for heavy rain, set up additional tarps. This depends on the quality of your tent. If the weather forecast calls for rain, just put up some tarps right away. You don’t want to be doing it in the pouring rain!
+                            <br><br>
+                                Setting up a tarp is an art. While watching tutorials can be helpful, each campsite is different, and may require some improvisation. The most important thing to remember is to slant the tarp so that the water runs AWAY from your tent. Gather some friends and treat it as a team building exercise! If there are no trees available to hang a tarp from, drape it over the top of your tent - it will be better than nothing! What’s camping without a little water?
+                            </p>
 
                         <!---------------SUBHEADING-04--------------->
                         <h4>
@@ -123,10 +138,14 @@
                             </p>
 
                                 <!---------------TEXT-LIST--------------->
-                                <ul class="text-list body-copy">
-                                    <li>Put down your sleeping pad (sleeping pad, foam, air mattress, yoga mat, cot), your sleeping bag, pillows, and sheets if applicable.</li>
-                                    <li>Make sure your sleeping pad does not touch the edges of your tent since it can pick up condensation.</li>
-                                </ul>
+                                <div class="container-list">
+                                    <div class="box-list">
+                                        Put down your sleeping pad (sleeping pad, foam, air mattress, yoga mat, cot), your sleeping bag, pillows, and sheets if applicable.
+                                    </div>
+                                    <div class="box-list">
+                                        Make sure your sleeping pad does not touch the edges of your tent since it can pick up condensation.
+                                    </div>
+                                </div>
 
                     <!---------------SUBHEADING-03--------------->
                     <h3>
@@ -137,7 +156,7 @@
                         <p class="body-copy">
                             First, make sure that your firepit is well built. To help reduce the risk of forest fires, all fires must be contained within a well built firepit.<br><br>
 
-                            Clean out the firepit if there is anything in it. If the ground of the firepit is humid or wet from rain, add a layer of aluminium foil to the bottom of the firepit.<br><br>
+                            Clean out the firepit if there is anything in it. If the ground of the firepit is humid from rain, add a layer of aluminium foil to the bottom of the firepit.<br><br>
 
                             Be smart about storing wood. Firewood has to remain dry as possible. Place your wood in a bin, in the car, or separate it from the ground by wrapping it with  a tarp. This will prevent it from picking up humidity from early-morning condensation. You can also dry the wood by carefully placing it on a grill on top of the firepit as the heat helps the water evaporate.
                         </p>
@@ -180,12 +199,15 @@
     </div><!--div.right-margin-->
 </div> <!-- div.main-grid-container -->
 
-<!---------------PAGE-NAVIGATION--------------->
+<!---------------PAGES-NAVIGATION--------------->
 <div class="nav-footer">
     <br><br>
-    <a class="nav-button" href="./02-Packing.html">◀</a>
-    <a class="nav-button" href=#top03>▲</a>
-    <a class="nav-button" href="./04-Maintenance.html">▶</a>
+    <a class="nav-button nav-button-left" href="./02-Packing.html">
+        <span class="material-symbols-outlined">arrow_back</span></a>
+    <a class="nav-button nav-button-top" href=#top03>
+        <span class="material-symbols-outlined">arrow_upward</span></a>
+    <a class="nav-button nav-button-right" href="./04-Maintenance.html">
+        <span class="material-symbols-outlined">arrow_forward</span></a>
     <br><br>
 </div><!-- div.nav-footer -->
 
@@ -194,14 +216,13 @@
     <div class="foot-margin-01">
     </div>
     <div class="foot-margin-02">
-        <img class="foot-img" src="./A2-images/loon-01-yellow.png" alt="White Cedar Leaf">
+        <img class="foot-img" src="./A2-images/loon-01-yellow.png" alt="Loon">
     </div>
     <div class="foot-margin-03">
         <h5>
             GROUP CAMPING GUIDE
         </h5>
-        <div class="horizontal-line-02"></div>
-        <a class="foot-nav" href="./index.html">Landing</a><br>
+        <div class="solid-line"></div>
         <a class="foot-nav" href="./00-Home.html">Home</a><br>
         <a class="foot-nav" href="./01-Planning.html">Planning</a><br>
         <a class="foot-nav" href="./02-Packing.html">Packing</a><br>
@@ -213,16 +234,15 @@
         <h5>
             COMMUNITY SPACE
         </h5>
-        <div class="horizontal-line-02"></div>
+        <div class="solid-line"></div>
         <a class="foot-nav" href="./Community.html">Tips & Tricks</a><br>
         <a class="foot-nav" href="./Community.html#contact">Contact Us</a><br>
         <br>
         <h5>
             OTHER
         </h5>
-        <div class="horizontal-line-02"></div>
-        <a class="foot-nav" href="https://docs.google.com/document/u/0/d/1l6H6FW9CfG81FoqeKZvDWh9TR8piv7zdEZdwwi5f68o/" target="_blank">Packing List</a><br>
-        <a class="foot-nav" href="./Sources.html">Works Cited</a><br>
+        <div class="solid-line"></div>
+        <a class="foot-nav" href="https://docs.google.com/document/u/0/d/1l6H6FW9CfG81FoqeKZvDWh9TR8piv7zdEZdwwi5f68o/" target="_blank">Packing List</a>
     </div>
     <div class="foot-margin-05">
     </div>

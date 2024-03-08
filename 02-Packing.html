@@ -18,7 +18,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Londrina+Outline&family=Londrina+Solid:wght@100;300;400;900&display=swap" rel="stylesheet">
-
+    <!---------------ARROWS--------------->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 
 <!---------------HEADER--------------->
@@ -27,9 +28,7 @@
 
     <!---------------HEADER-TEXT-QUEERING-CAMPING--------------->
     <div class="QC-header">
-        <h1>
-            <a id="header-text" href="./index.html">QUEERING CAMPING</a>
-        </h1>
+        <button class="QC-btn"><a class="header-text" href="./index.html">QUEERING CAMPING</a></button>
     </div><!--div.QC-header-->
 
     <!---------------HEADER-NAVIGATION--------------->
@@ -49,7 +48,7 @@
         <a class="community-page" href="./Community.html">Community Space</a>
     </div><!--div.dropdown-->
     </div><!--div.dropdown-->
-    </div><!--div.nav-header TA-center-->
+    </div><!--div.nav-header-->
 
 </div><!--div.mid-green-bg / HEADER-->
 
@@ -62,10 +61,12 @@
 
     <!---------------LEFT-CONTAINER-IMAGES--------------->
     <div class="left-container-img">
+        <img class="img-size" src="./A2-images/picnic-table-01-green.png" alt="Picnic Table">
         <img class="img-size" src="./A2-images/hot-dog-01-green.png" alt="Three Hot Dogs">
+        <img class="img-size shrink" src="./A2-images/cooler-01-green.png" alt="Cooler">
         <img class="img-size" src="./A2-images/bandana-01-green.png" alt="Bandana">
-        <img class="img-size" src="./A2-images/axe-01-green.png" alt="Axe">
         <img class="img-size" src="./A2-images/hiking-boots-01-green.png" alt="Hiking Boots">
+        <img class="img-size" src="./A2-images/sleeping-bag-01-green.png" alt="Sleeping Bag">
     </div><!--div.left-container-img-->
 
     <!---------------RIGHT-CONTAINER-TEXT--------------->
@@ -91,23 +92,32 @@
 
                         <!---------------BODY-COPY-PARAGRAPH--------------->
                         <p class="body-copy">
-                            While planning meals, keep in mind what cooking gear you will have at your disposal. You can bring a camping stove or you can cook on the fire. Plan all meals with your group before leaving and split the task of grocery shopping. Try to think of meals that are easy to prepare and are suitable for big groups. Also try to choose meals that have an overlap of ingredients, for ease of grocery shopping.<br><br>
+                            While planning meals, keep in mind what cooking gear you will have at your disposal. You can bring a camping stove or you can cook on the fire. Plan all meals with your group before leaving and split the task of grocery shopping. Try to think of meals that are easy to prepare and are suitable for big groups. Also try to choose meals that have an overlap of ingredients, for ease of grocery shopping.
+                        </p>
+                            <!---------------QUOTE--------------->
+                                <aside class="quote">
+                                    “Pack more food than you think you need” - Kosame
+                                </aside>
 
+                        <p class="body-copy">
                             Some more tips:
                         </p>
 
                             <!---------------TEXT-LIST--------------->
-                            <ul class="text-list body-copy">
-                                <li>Note your group members’ dietary restrictions and try to completely avoid allergens is possible.</li>
-                                <li>Prepare your food in advance (marinade, chop, spice mixes, etc.) and bring it in food storage containers to save tie and limit food handling once at the site.</li>
-                                <li>If you are looking to make simple, affordable meals, consider bringing some premade meals and canned goods. Hot dogs and sandwiches are examples of some classic quick and cheap camping meals.</li>
-                                <li>Bring lots of snacks that are filling and high in protein and nutrients.</li>
-                            </ul>
-
-                            <!---------------QUOTE--------------->
-                            <aside class="quote">
-                                “Pack more food than you think you need” - Kosame
-                            </aside>
+                        <div class="container-list">
+                            <div class="box-list">
+                                Note your group members’ dietary restrictions and try to completely avoid allergens is possible.
+                            </div>
+                            <div class="box-list">
+                                Prepare your food in advance (marinade, chop, spice mixes, etc.) and bring it in food storage containers to save tie and limit food handling once at the site.
+                            </div>
+                            <div class="box-list">
+                                If you are looking to make simple, affordable meals, consider bringing some premade meals and canned goods. Hot dogs and sandwiches are examples of some classic quick and cheap camping meals.
+                            </div>
+                            <div class="box-list">
+                                Bring lots of snacks that are filling and high in protein and nutrients.
+                            </div>
+                        </div>
 
                         <!---------------BODY-COPY-PARAGRAPH--------------->
                         <p class="body-copy">
@@ -126,22 +136,47 @@
                             Here are a few resources to find inspiration for your meal planning:
                         </p>
 
-                            <!---------------LINK-LIST--------------->
-                            <ul class="link-list body-copy">
-                                <li><a class=link-out href="https://www.freshoffthegrid.com/27-easy-camping-meals/" target="_blank">Easy Camping Meals to Make Camp Cooking a Breeze</a></li>
-                                <li><a class=link-out href="https://www.freshoffthegrid.com/vegetarian-camping-meals/" target="_blank">Vegetarian Camping Meals</a></li>
-                                <li><a class=link-out href="https://www.freshoffthegrid.com/vegan-camping-food/" target="_blank">Vegan Camping Food Ideas for Plant-Based Adventurers</a></li>
-                            </ul>
+                            <!---------------LINK-BUTTON-LIST--------------->
+                                    <!-- code below by __ with class name modifications and div additions by me -->
+                                    <div class="link-btn-container">
+                                        <button class="link-btn">
+                                            <span class="circle">
+                                                <span class="arrow"></span>
+                                            </span>
+                                                <!-- attribute added by me -->
+                                                <a class="link-btn-text" href="https://www.freshoffthegrid.com/27-easy-camping-meals/" target="_blank">Easy Camping Meals to Make Camp Cooking a Breeze</a>
+                                        </button>
+                                        <button class="link-btn">
+                                            <span class="circle">
+                                                <span class="arrow"></span>
+                                            </span>
+                                                <a class="link-btn-text" href="https://www.freshoffthegrid.com/vegetarian-camping-meals/" target="_blank">Vegetarian Camping Meals</a>
+                                        </button>
+                                        <button class="link-btn">
+                                            <span class="circle">
+                                                <span class="arrow"></span>
+                                            </span>
+                                                <a class="link-btn-text" href="https://www.freshoffthegrid.com/vegan-camping-food/" target="_blank">Vegan Camping Food Ideas for Plant-Based Adventurers</a>
+                                        </button>
+                                    </div>
 
                         <!---------------BODY-COPY-PARAGRAPH---------------> 
                         <p class="body-copy">
-                            Check out this resource for more information on packing food and planning meals for camping:
+                            <br>Check out this resource for more information on packing food and planning meals for camping:
                         </p>
 
-                            <!---------------LINK-LIST--------------->
-                            <ul class="link-list body-copy">
-                                <li><a class=link-out href="https://www.freshoffthegrid.com/camping-pantry/" target="_blank">Camping Food List and Meal Planning Tips</a></li>
-                            </ul>
+                            <!---------------LINK-BUTTON-LIST--------------->
+                                    <!-- code below by __ with class name modifications and div additions by me -->
+                                    <div class="link-btn-container">
+                                        <button class="link-btn">
+                                            <span class="circle">
+                                                <span class="arrow"></span>
+                                            </span>
+                                                <!-- attribute added by me -->
+                                                <a class="link-btn-text" href="https://www.freshoffthegrid.com/camping-pantry/" target="_blank">Camping Food List and Meal Planning Tips</a>
+                                        </button>
+                                    </div>
+
                     <!---------------SUBHEADING-03--------------->        
                     <h3> 
                         Clothes
@@ -177,14 +212,21 @@
                             Here is my essential camping list:
                         </p>
 
-                            <!---------------LINK-LIST--------------->
-                            <ul class="link-list body-copy">
-                                <li><a class=link-out href="https://docs.google.com/document/u/0/d/1l6H6FW9CfG81FoqeKZvDWh9TR8piv7zdEZdwwi5f68o/" target="_blank">Queering Camping | Camping List</a></li>
-                            </ul>
+                            <!---------------LINK-BUTTON-LIST--------------->
+                                    <!-- code below by __ with class name modifications and div additions by me -->
+                                    <div class="link-btn-container">
+                                        <button class="link-btn">
+                                            <span class="circle">
+                                                <span class="arrow"></span>
+                                            </span>
+                                                <!-- attribute added by me -->
+                                                <a class="link-btn-text" href="hhttps://docs.google.com/document/u/0/d/1l6H6FW9CfG81FoqeKZvDWh9TR8piv7zdEZdwwi5f68o/" target="_blank">Queering Camping | Camping List</a>
+                                        </button>
+                                    </div>
 
                         <!---------------BODY-COPY-PARAGRAPH---------------> 
                         <p class="body-copy">
-                            One of the most important items in camping are BINS! Pack everything in plastic bins that clip shut, including food. Organize your items by purpose (ex. Cooking bin, pantry bin, site gear bin, etc.) Secure the bins with locking carabiners and lock them in the car at night.<br><br>
+                            <br>One of the most important items in camping are BINS! Pack everything in plastic bins that clip shut, including food. Organize your items by purpose (ex. Cooking bin, pantry bin, site gear bin, etc.) Secure the bins with locking carabiners and lock them in the car at night.<br><br>
 
                             Try to thrift, borrow, rent, and share items as much as possible. There’s no need to go out and buy new gear. Bring items you already own from home!
                         </p>
@@ -207,15 +249,30 @@
                     </h3>
 
                         <!---------------TEXT-LIST--------------->
-                        <ul class="text-list body-copy">
-                            <li>Practice your essential outdoors skills and make sure you know how your gear works before getting to the campsite. For example, practice setting up your tent ahead of time in your backyard. If you don’t have access to a backyard, set up the tent in your local park and have a picnic!</li>
-                            <li>Knowing some basic knots can be helpful.</li>
-                            <li>Make sure you know how your first aid kit works before you leave. Everyone in your group should know where it is located and how it works. Medical care is not as easy to access when out camping, so a well-stocked first aid kit is essential. </li>
-                            <li>Download a digital map of area on your phone to avoid navigation issues when low data cell service or analog printed-out map as a fail-safe.</li>
-                            <li>Make sure your sleeping bag is rated to a low enough temperature to cover the coldest camping night.</li>
-                            <li>Make sure you choose a sleeping pad that is comfortable for you. This might be a simple yoga mat, or a inflatable air mattress, or maybe even a small cot. Make sure that it fits in your tent.</li>
-                            <li>A compass and loud whistle is especially useful if you’re planning on going hiking or backcountry camping.</li>
-                        </ul>
+                        <div class="container-list">
+                            <div class="box-list">
+                                Practice your essential outdoors skills and make sure you know how your gear works before getting to the campsite. For example, practice setting up your tent ahead of time in your backyard. If you don’t have access to a backyard, set up the tent in your local park and have a picnic!
+                            </div>
+                            <div class="box-list">
+                                Knowing some basic knots can be helpful.
+                            </div>
+                            <div class="box-list">
+                                Make sure you know how your first aid kit works before you leave. Everyone in your group should know where it is located and how it works. Medical care is not as easy to access when out camping, so a well-stocked first aid kit is essential.
+                            </div>
+                            <div class="box-list">
+                                Download a digital map of area on your phone to avoid navigation issues when low data cell service or analog printed-out map as a fail-safe.
+                            </div>
+                            <div class="box-list">
+                                Make sure your sleeping bag is rated to a low enough temperature to cover the coldest camping night.
+                            </div>
+                            <div class="box-list">
+                                Make sure you choose a sleeping pad that is comfortable for you. This might be a simple yoga mat, or a inflatable air mattress, or maybe even a small cot. Make sure that it fits in your tent.
+                            </div>
+                            <div class="box-list">
+                                A compass and loud whistle is especially useful if you’re planning on going hiking or backcountry camping.
+                            </div>
+                        </div>
+
         </div><!--body-copy-width/mid-green-->
     </div><!--right-container-text-->
 
@@ -224,12 +281,15 @@
     </div><!-- div.right-margin -->
 </div> <!-- div.main-grid-container -->
 
-<!---------------PAGE-NAVIGATION--------------->
+<!---------------PAGES-NAVIGATION--------------->
 <div class="nav-footer">
     <br><br>
-    <a class="nav-button" href="./01-Planning.html">◀</a>
-    <a class="nav-button" href=#top02>▲</a>
-    <a class="nav-button" href="./03-Setting-Up.html">▶</a>
+    <a class="nav-button nav-button-left" href="./01-Planning.html">
+        <span class="material-symbols-outlined">arrow_back</span></a>
+    <a class="nav-button nav-button-top" href=#top02>
+        <span class="material-symbols-outlined">arrow_upward</span></a>
+    <a class="nav-button nav-button-right" href="./03-Setting-Up.html">
+        <span class="material-symbols-outlined">arrow_forward</span></a>
     <br><br>
 </div><!-- div.nav-footer -->
 
@@ -238,14 +298,13 @@
     <div class="foot-margin-01">
     </div>
     <div class="foot-margin-02">
-        <img class="foot-img" src="./A2-images/loon-01-yellow.png" alt="White Cedar Leaf">
+        <img class="foot-img" src="./A2-images/loon-01-yellow.png" alt="Loon">
     </div>
     <div class="foot-margin-03">
         <h5>
             GROUP CAMPING GUIDE
         </h5>
-        <div class="horizontal-line-02"></div>
-        <a class="foot-nav" href="./index.html">Landing</a><br>
+        <div class="solid-line"></div>
         <a class="foot-nav" href="./00-Home.html">Home</a><br>
         <a class="foot-nav" href="./01-Planning.html">Planning</a><br>
         <a class="foot-nav" href="./02-Packing.html">Packing</a><br>
@@ -257,16 +316,15 @@
         <h5>
             COMMUNITY SPACE
         </h5>
-        <div class="horizontal-line-02"></div>
+        <div class="solid-line"></div>
         <a class="foot-nav" href="./Community.html">Tips & Tricks</a><br>
         <a class="foot-nav" href="./Community.html#contact">Contact Us</a><br>
         <br>
         <h5>
             OTHER
         </h5>
-        <div class="horizontal-line-02"></div>
-        <a class="foot-nav" href="https://docs.google.com/document/u/0/d/1l6H6FW9CfG81FoqeKZvDWh9TR8piv7zdEZdwwi5f68o/" target="_blank">Packing List</a><br>
-        <a class="foot-nav" href="./Sources.html">Works Cited</a><br>
+        <div class="solid-line"></div>
+        <a class="foot-nav" href="https://docs.google.com/document/u/0/d/1l6H6FW9CfG81FoqeKZvDWh9TR8piv7zdEZdwwi5f68o/" target="_blank">Packing List</a>
     </div>
     <div class="foot-margin-05">
     </div>
