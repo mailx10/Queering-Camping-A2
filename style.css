@@ -109,7 +109,7 @@ html{
     */
 
     div#bg-img {
-      background-color: #405B34;
+      background-color: #415B34;  /* mid-green */
       min-height: 100vh;
       min-width: 100vw;
       overflow: hidden;
@@ -640,7 +640,7 @@ html{
   /* 
   Code by GREATSTACK on Youtube 
   Link: https://www.youtube.com/watch?v=fSkhTd4rpDo
-  Modified colors, font properties, transitions,
+  Modified colors, font properties, transitions.
   */
 
   .accordion{
@@ -654,7 +654,7 @@ html{
     padding: 10px;
     border-radius: 20px;
     background-color: #415B34; /* mid-green */
-    color: #FFF9C7;
+    color: #FFF9C7; /* light-yellow */
     font-family: "Libre Franklin", sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -664,7 +664,7 @@ html{
 
   .accordion li:hover{
     background-color: #64894E; /* light-green */
-    color: #FFF9C7;
+    color: #FFF9C7; /* light-yellow */
   }
 
   .accordion li label{
@@ -709,44 +709,7 @@ html{
 
 /*-----BOTTOM-NAVIGATION-----*/
 
-a.nav-button{
-  display: inline-block;
-  text-decoration: none;
-  font-family: "Libre Franklin", sans-serif;
-  font-weight: 500;
-  font-size: 18px;
-  color: #64894E; /* light-green */
-  border: 1px solid #64894E;
-  border-radius: 10px;
-  padding: 0.5em;
-  margin: 0.25em;
-  cursor: pointer;
-  align-items: center;
-  transition: 500ms ease-out;
-  height: 25px;
-}
-
-.nav-button-top:hover{
-  color: #415B34; /* mid-green */
-  background-color: #B8BF60; /* yellow-green */
-  border: 1px solid #B8BF60;
-  transform: translateY(-4px)
-}
-
-.nav-button-left:hover{
-  color: #415B34; /* mid-green */
-  background-color: #B8BF60; /* yellow-green */
-  border: 1px solid #B8BF60;
-  transform: translateX(-4px)
-}
-
-.nav-button-right:hover{
-  color: #415B34; /* mid-green */
-  background-color: #B8BF60; /* yellow-green */
-  border: 1px solid #B8BF60;
-  transform: translateX(4px)
-}
-
+/* nav footer layout */
 div.nav-footer{
   display: inline-block;
   width: 100vw;
@@ -757,14 +720,114 @@ div.nav-footer{
   padding-bottom: 1.5em;
 }
 
-/*-----EMBED-VIDEO-IFRAME-----*/
+  /*-Nav buttons-*/
 
-iframe{
-  width: 100%;
-  padding-top: 1em;
-  padding-bottom: 1em;
+  /* main button styling */
+  a.nav-button{
+    display: inline-block;
+    text-decoration: none;
+    font-family: "Libre Franklin", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: #64894E; /* light-green */
+    border: 1px solid #64894E;
+    border-radius: 10px;
+    padding: 0.5em;
+    margin: 0.25em;
+    cursor: pointer;
+    align-items: center;
+    transition: 500ms ease-out;
+    height: 25px;
   }
 
+  /* scroll to top button translates up following arrow direction on hover */
+  .nav-button-top:hover{
+    color: #415B34; /* mid-green */
+    background-color: #B8BF60; /* yellow-green */
+    border: 1px solid #B8BF60; /* yellow-green */
+    transform: translateY(-4px)
+  }
+
+  /* last page button translates left following arrow direction on hover */
+  .nav-button-left:hover{
+    color: #415B34; /* mid-green */
+    background-color: #B8BF60; /* yellow-green */
+    border: 1px solid #B8BF60; /* yellow-green */
+    transform: translateX(-4px)
+  }
+
+  /* next page button translates right following arrow direction on hover */
+  .nav-button-right:hover{
+    color: #415B34; /* mid-green */
+    background-color: #B8BF60; /* yellow-green */
+    border: 1px solid #B8BF60; /* yellow-green */
+    transform: translateX(4px)
+  }
+
+/*-----VIDEOS-----*/
+
+  /*-Embed video iFrame*/
+  iframe{
+    width: 100%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+
+/*-Collapse Videos-*/
+  /* 
+  Code by Dev + Coffee on Youtube 
+  Link: https://www.youtube.com/watch?v=-TCcJ4ap05o
+  Modified colors, border radius, font properties, class names, sizing, padding, margins.
+  Added transitions.
+  */
+
+
+  /* Hide Checkbox */
+  #vid01, #vid02{ 
+    display: none 
+  }
+
+  /* Style */
+  #togL, #content { 
+    display: block;
+    width: 95%; 
+    padding: 10px 15px;
+    transition: 500ms ease;
+    cursor: pointer;
+  }
+
+  #togL{
+    background-color: #64884E; /* light-green */
+    color: #FFF8C8; /* light-yellow */
+    font-family: "Libre Franklin", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    border-top: 5px solid #FFF8C8; /* light-yellow */
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+
+  #togL:hover{
+    background-color: #415B34; /* mid-green */
+    transition: 500ms ease;
+  }
+
+  #content{
+    background-color: #415B34; /* mid-green */
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
+  /* Hide div content */
+  #content{ 
+    display: none;
+  }
+
+  /* Only show when checked */
+  #vid01:checked + #content { display: block;}
+
+  #vid02:checked + #content { display: block;}
 
 /*-----FOOTER-----*/
 
@@ -816,56 +879,6 @@ a.foot-nav:hover{
   color: #B8BF60; /* yellow-green */
 }
 
-/*-----COLLAPSE VIDEOS ATTEMPT-----*/
-  /* Code snippets by Code Boxx on Youtube */
-
-  /* Hide Checkbox */
-  #vid01, #vid02{ 
-    display: none 
-  }
-
-  /* Style */
-  #togL, #content { 
-    display: block;
-    width: 95%; 
-    padding: 10px 15px;
-    transition: 500ms ease;
-    cursor: pointer;
-  }
-
-  #togL{
-    background-color: #64884E; /* light-green-bg */
-    color: #FFF8C8; /* light-yellow */
-    font-family: "Libre Franklin", sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    border-top: 5px solid #FFF8C8; /* light-yellow */
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-  }
-
-  #togL:hover{
-    background-color: #415B34; /* mid-green */
-    transition: 500ms ease;
-  }
-
-  #content{
-    background-color: #415B34; /* mid-green */
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-  }
-
-  /* Hide div content */
-  #content{ 
-    display: none;
-  }
-
-  /* Only show when checked */
-  #vid01:checked + #content { display: block;}
-
-  #vid02:checked + #content { display: block;}
-
 /*-----FOOTER-IMAGE-----*/
 
   img.foot-img{
@@ -874,6 +887,7 @@ a.foot-nav:hover{
     transition: 500ms ease;
   }
 
+  /*hover animation*/
   img.foot-img:hover{
     transform: rotate(-15deg);
     transition: 500ms ease;
